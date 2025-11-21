@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({
   badge,
@@ -12,23 +13,24 @@ const Card = ({
   newPrice,
   reviews,
   stock,
+  id
 }) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       className="card"
+      onClick={() => navigate(`/product/${id}`)}
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 180, damping: 16 }}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter") navigate(`/product/${id}`); }}
     >
       {badge && <div className="badge">{badge}</div>}
 
       <div className="img">
-        <img
-          src={image}
-          alt={title}
-          loading="lazy"
-          width="350"
-          height="220"
-        />
+        <img src={image} alt={title} loading="lazy" width="350" height="220" />
       </div>
 
       <div className="info">
@@ -48,18 +50,9 @@ const Card = ({
             <span className="new">${newPrice}</span>
           </div>
 
-          <button className="btn">
+          <button className="btn" onClick={(e)=>{ e.stopPropagation(); /* cart op */ }}>
             <span>Add to Cart</span>
-
-            <svg
-              className="icon"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+            <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
