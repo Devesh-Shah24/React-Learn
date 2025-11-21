@@ -1,16 +1,100 @@
-# React + Vite
+# 🛒 StyleCard – Modern Product Cards UI (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, responsive and SEO-friendly product card UI built using **React**, **Vite**, **Framer Motion**, **React Router**, and **Dark/Light Mode** support.  
+Each card is fully animated, optimized for performance, and includes search, sorting, filtering, product details pages and lazy-loaded images.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** https://style-card.vercel.app/  
+📦 **Tech Stack:** React 19, Vite, React Router 7, Framer Motion 12  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✔ **Fast Vite build (90+ Lighthouse score)**
+- ✔ **Dark / Light Mode with ThemeContext**
+- ✔ **Search, Filters & Sorting**
+- ✔ **SEO-optimized product pages**
+- ✔ **Product Details Page (Dynamic Routing)**
+- ✔ **Lazy loading for images**
+- ✔ **Framer Motion animations**
+- ✔ **Responsive card layout**
+- ✔ **Optimized Unsplash photos**
+- ✔ **Vercel deployment ready**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 UI Preview
+
+![Preview](/preview.png)
+
+---
+
+## 📁 Folder Structure
+
+src/
+├── App.jsx
+├── App.css
+├── main.jsx
+├── data/products.js
+├── components/
+│ ├── SearchBar.jsx
+│ ├── Filters.jsx
+│ ├── SortMenu.jsx
+├── pages/
+│ └── Home.jsx
+├── Card.jsx
+├── ProductDetails.jsx
+└── context/ThemeContext.jsx
+
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/Devesh-Shah24/style-card.git
+cd style-card
+npm install
+npm run dev
+
+---
+
+🏗️ Build for Production
+
+npm run build
+npm run preview
+
+---
+
+🌍 Deployment (Vercel)
+
+Use:
+
+Build Command: npm run build
+
+Output Folder: dist
+
+vercel.json included with security headers + SPA routing fix.
+
+---
+
+📈 Lighthouse Performance
+
+| Category       | Score |
+| -------------- | ----- |
+| Performance    | 85–95 |
+| Accessibility  | 90+   |
+| Best Practices | 100   |
+| SEO            | 90+   |
+
+---
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, open an issue first.
+
+---
+
+📝 License
+
+MIT License © 2025 Devesh Kumar
