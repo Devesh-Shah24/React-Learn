@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import Card from "./Card.jsx";
-import products from "./data/products.js";
+import "./App.css";
+import Card from "./Card";
+import products from "./data/products";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 800);
+    setTimeout(() => setLoading(false), 800);
   }, []);
 
   if (loading) {
@@ -20,8 +19,8 @@ function App() {
       <h1 style={{ marginBottom: "20px" }}>Dynamic Product Cards</h1>
 
       <div className="container">
-        {products.map((item, index) => (
-          <Card key={index} {...item} />
+        {products.map((item, i) => (
+          <Card key={i} {...item} />
         ))}
       </div>
     </>

@@ -16,26 +16,29 @@ const Card = ({
   return (
     <motion.div
       className="card"
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 180, damping: 12 }}
+      whileHover={{ y: -5 }}
+      transition={{ type: "spring", stiffness: 180, damping: 16 }}
     >
       {badge && <div className="badge">{badge}</div>}
 
       <div className="img">
-        <img src={image} alt={title} loading="lazy" />
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          width="350"
+          height="220"
+        />
       </div>
 
       <div className="info">
         <div className="cat">{category}</div>
         <h2 className="title">{title}</h2>
-
         <p className="desc">{desc}</p>
 
         <div className="feats">
           {features.map((f, i) => (
-            <span key={i} className="feat">
-              {f}
-            </span>
+            <span key={i} className="feat">{f}</span>
           ))}
         </div>
 
@@ -67,17 +70,10 @@ const Card = ({
         <div className="meta">
           <div className="rating">
             {Array.from({ length: 5 }).map((_, i) => (
-              <svg
-                key={i}
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="#FFD700"
-              >
+              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#FFD700">
                 <polygon points="12 2 15.09 8.26 22 9.27 
-                  17 14.14 18.18 21.02 12 17.77 
-                  5.82 21.02 7 14.14 2 9.27 8.91 
-                  8.26 12 2" />
+                  17 14.14 18.18 21.02 12 17.77 5.82 21.02 
+                  7 14.14 2 9.27 8.91 8.26 12 2" />
               </svg>
             ))}
             <span className="rcount">{reviews} Reviews</span>
