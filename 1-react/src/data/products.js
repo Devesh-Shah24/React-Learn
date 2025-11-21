@@ -37,7 +37,7 @@ const products = [
   },
   {
     badge: "Trending",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
     category: "Business Laptop",
     title: "ThinkBook Elite 14",
     desc: "Intel i7 13th Gen, 16GB RAM, 1TB SSD, metal body finish.",
@@ -61,7 +61,7 @@ const products = [
   },
   {
     badge: "Editor's Choice",
-    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80",
     category: "Ultra-Slim Notebook",
     title: "FeatherBook Air 13",
     desc: "Lightweight productivity laptop with long-lasting battery.",
