@@ -5,7 +5,6 @@ import products from "./data/products.js";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // Loader delay (smooth UI)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
